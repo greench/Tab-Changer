@@ -1,9 +1,13 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget xmlns="http://www.w3.org/ns/widgets" id="https://addons.opera.com/addons/extensions/details/tab-changer/" version="0.1">
+<widget xmlns="http://www.w3.org/ns/widgets" id="https://addons.opera.com/addons/extensions/details/tab-changer/" version="0.2">
   <name>Tab Changer</name>
   <icon src="simge_64.png"/>
   <license>This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public LicensE as published bythe Free Software Foundation, either version 3 of the License, or (at your option) any later version. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with this program.  If not, see http://www.gnu.org/licenses/</license>
   <author href="http://my.opera.com/greench" email="greench@myopera.com">greench</author>
-  <description xml:lang="en">Change tabs with ctrl + # keys</description>
-  <description xml:lang="tr">Ctrl + # tuşlarıyla sekme değiştirme.</description>
+  <description xml:lang="en">Change tabs with modifier + # keys</description>
+  <description xml:lang="ru">Переключает табы с помощью клавиш модификатор + цифра</description>
+  <description xml:lang="tr">Modifier + # tuşlarıyla sekme değiştirme.</description>
+  <preference name = "option"
+    value    = "0"
+    readonly = "false"/> <!-- also can be 0 == Ctrl, 1 == Alt, 2 == Meta -->
 </widget>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tab Changer</title>
+  </head>
+  <body>
+    <fieldset>
+      <p>
+        <label for="option">Select a modifier</label>
+        <select name="option" id="option">
+          <option value="0">Ctrl</option>
+          <option value="1">Alt</option>
+          <option value="2">Meta (Cmd)</option>
+        </select>
+      </p>
+    </fieldset>
+    <p>Please make shure to reopen old tabs to make changes work.</p>
+    <script>
+
+      var select = document.getElementById('option');
+      var source = false;
+      opera.extension.onmessage = function(event){
+        source = event.source;
+      }
+      if ( widget.preferences.option ) {
+        select.value = widget.preferences.option;
+      }
+      select.addEventListener('change', function() {
+        widget.preferences.option = this.value;
+        if (source)
+          source.postMessage("reset");
+      }, false );
+    </script>
+  </body>
+</html>
